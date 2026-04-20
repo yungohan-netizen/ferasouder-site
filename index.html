@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fer à Souder Fils — Ferronnerie d'art contemporaine à Bruxelles. Auvents, escaliers, baies vitrées, verrières et mobilier sur mesure. Chaussée de Haecht 588, Schaerbeek.">
+<title>Fer à Souder Fils — Le fer qui raconte Bruxelles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Playfair pour les titres · Syne pour l'UI/labels · DM Sans pour le corps -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Syne:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Aller au contenu</a>
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="cur-label">VOIR</div>
+<div id="scroll-progress"></div>
+<div id="torch"></div>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <img src="https://i.ibb.co/cSKJz7GK/logo.png" alt="Fer à Souder Fils" class="preloader-logo" id="brandLogoPreloader">
+  <div class="pline"></div>
+  <span class="preloader-word">Ferronnerie d'art</span>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+  <div class="mobile-menu-logo">
+    <img src="https://i.ibb.co/cSKJz7GK/logo.png" alt="Fer à Souder Fils" loading="lazy" id="brandLogoMobile">
+  </div>
+  <a href="#manifeste" onclick="closeMobile()">Maison</a>
+  <a href="#creations" onclick="closeMobile()">Créations</a>
+  <a href="#processus" onclick="closeMobile()">Processus</a>
+  <a href="#atelier" onclick="closeMobile()">Atelier</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo" aria-label="Fer à Souder Fils — Retour accueil">
+    <img src="https://i.ibb.co/cSKJz7GK/logo.png" alt="Fer à Souder Fils" class="nav-logo-img" loading="eager" width="60" height="28" id="brandLogo">
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#manifeste">Maison</a></li>
+    <li><a href="#creations">Créations</a></li>
+    <li><a href="#processus">Processus</a></li>
+    <li><a href="#atelier">Atelier</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta"><span id="navCtaLabel">Nous contacter</span></a>
+  <button class="nav-burger" id="burger" onclick="toggleMobile()" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section id="hero">
+  <video class="hero-video" id="heroVideo" autoplay loop muted playsinline preload="auto">
+    <source src="https://res.cloudinary.com/dqfgzja87/video/upload/v1776293353/TensorPix_-_Animate_this_exact_202604160023_haxwde.mp4" type="video/mp4" id="heroVideoSource">
+  </video>
+
+  <div class="hero-fade-top"></div>
+  <div class="hero-fade-bottom"></div>
+
+  <svg class="hero-whiplash" id="heroWhiplash" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-100,350 C200,350 300,50 600,150 C900,250 1000,50 1540,100" stroke="rgba(255,183,121,0.11)" stroke-width="1" fill="none"/>
+    <path d="M-100,380 C300,380 400,100 700,200 C1000,300 1100,80 1540,150" stroke="rgba(255,183,121,0.055)" stroke-width="1" fill="none"/>
+    <path d="M0,420 C250,420 450,150 750,250 C1050,350 1200,120 1540,200" stroke="rgba(44,62,47,0.25)" stroke-width="1" fill="none"/>
+  </svg>
+
+  <!-- Side text -->
+  <div class="hero-side-text" aria-hidden="true" id="heroSideText">Schaerbeek · Bruxelles · Chaussée de Haecht</div>
+
+  <!-- Hero content — pas de logo, tagline grand format -->
+  <div class="hero-content">
+    <div class="hero-eyebrow" id="heroEyebrow">Fer à Souder Fils — Bruxelles</div>
+    <h1 class="hero-tagline" id="heroTagline">Le fer qui<br>raconte Bruxelles.</h1>
+    <div class="hero-ctas" id="heroCtas">
+      <a href="#creations" class="btn-glass btn-glass-primary" id="heroCtaPrimary">
+        <span id="heroCtaPrimaryLabel">Nos créations</span>
+        <span class="arr" aria-hidden="true">&#8594;</span>
+      </a>
+      <a href="#contact" class="btn-glass" id="heroCtaSecondary">
+        <span id="heroCtaSecondaryLabel">Nous contacter</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Badge confiance rotatif -->
+  <div class="trust-badge" id="trustBadge" aria-hidden="true">
+    <div class="trust-badge-ring">
+      <svg viewBox="0 0 100 100" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;">
+        <path id="tp" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="none"/>
+        <text font-family="Syne,sans-serif" font-size="8" fill="rgba(255,183,121,0.7)" letter-spacing="2.2">
+          <textPath href="#tp" startOffset="50%" text-anchor="middle">FERRONNERIE · SUR MESURE · BRUXELLES</textPath>
+        </text>
+      </svg>
+      <div class="trust-badge-center">
+        <span class="trust-badge-num">15</span>
+        <span class="trust-badge-sub">ans</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom strip — Découvrir + Marquee sur une seule barre, zéro chevauchement -->
+  <div class="hero-bottom-strip" id="heroBottomStrip">
+    <div class="hero-scroll">
+      <span class="hero-scroll-text">Découvrir</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="hero-marquee-track" id="heroMarqueeTrack"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTE -->
+<section id="manifeste" style="position:relative;overflow:hidden">
+  <span class="section-count" aria-hidden="true">01</span>
+  <div class="manifeste-inner">
+    <div class="manifeste-left">
+      <div class="section-label fade-up" id="manifesteLabel">Maison</div>
+      <h2 class="fade-up d1" id="manifesteTitle">La ferronnerie d'art<br><em>revisitée.</em></h2>
+      <div id="manifesteParagraphs">
+        <p class="fade-up d2">Nous ne travaillons pas le métal comme un simple matériau technique. Nous le façonnons comme une présence dans l'espace — une courbe qui prolonge l'architecture et lui donne une voix.</p>
+        <p class="fade-up d3">À Bruxelles, l'atelier donne forme à des pièces sur mesure pensées pour durer. Chaque soudure, chaque patine, chaque tension de ligne participe à un ensemble silencieux, précis, habité.</p>
+      </div>
+      <p class="fade-up d4" style="font-size:13.5px;color:rgba(243,239,230,.36);font-style:italic;margin-top:8px;" id="manifesteNote">Particuliers, architectes et entreprises — depuis 15 ans.</p>
+    </div>
+    <div class="manifeste-grid fade-up d2">
+      <div class="m-img">
+        <img src="https://i.ibb.co/LdwyDsLc/xxxx.png" alt="Atelier de ferronnerie d'art" loading="lazy" id="manifesteImg1">
+        <div class="m-ph" id="manifesteImg1Ph">Atelier</div>
+      </div>
+      <div class="m-img">
+        <img src="https://i.ibb.co/S4x7DzQC/capture-d-cran-2026-01-15-161720-standard.webp" alt="Détail de métal forgé" loading="lazy" id="manifesteImg2">
+        <div class="m-ph" id="manifesteImg2Ph">Détail</div>
+      </div>
+      <div class="m-img">
+        <img src="https://i.ibb.co/8nzs9f4K/18.png" alt="Processus de soudure" loading="lazy" id="manifesteImg3">
+        <div class="m-ph" id="manifesteImg3Ph">Forge</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRÉATIONS -->
+<section id="creations" style="position:relative;overflow:hidden">
+  <span class="section-count" aria-hidden="true">02</span>
+  <div class="creations-inner">
+    <div class="creations-header">
+      <div>
+        <div class="section-label fade-up" id="creationsLabel">Nos créations</div>
+        <h2 class="fade-up d1" id="creationsTitle">Pièces <em>uniques,</em><br>espaces singuliers.</h2>
+      </div>
+      <p class="fade-up d2" id="creationsIntro">De la conception à la pose, chaque réalisation naît d'un dialogue entre votre vision et notre savoir-faire.</p>
+    </div>
+    <div class="creations-grid" id="creationsGrid"></div>
+  </div>
+</section>
+
+<!-- PROCESSUS -->
+<section id="processus" style="position:relative;overflow:hidden">
+  <span class="section-count" aria-hidden="true">03</span>
+  <div class="processus-inner">
+    <div class="processus-left">
+      <div class="section-label fade-up" id="processusLabel">Méthode</div>
+      <h2 class="fade-up d1" id="processusTitle">Du <em>trait</em><br>à la pièce.</h2>
+      <p class="fade-up d2" id="processusIntro"></p>
+      <a href="#contact" class="btn-bronze fade-up d3" id="processusCta">
+        <span id="processusCtaLabel">Démarrer un projet</span>
+        <span class="arr" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="processus-steps fade-up d2" id="processusSteps">
+      <div class="p-line-bg" id="pLineBg"></div>
+      <div class="p-line-fill" id="pLineFill"></div>
+      <div id="processusStepsList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ATELIER -->
+<section id="atelier" style="position:relative;overflow:hidden">
+  <span class="section-count" aria-hidden="true">04</span>
+  <div class="atelier-inner">
+    <div class="atelier-header">
+      <div class="section-label fade-up" id="atelierLabel">L'atelier</div>
+      <h2 class="fade-up d1" id="atelierTitle">L'héritage<br>du <em>geste.</em></h2>
+    </div>
+    <!-- GALLERY IMMERSIVE — contenu généré depuis projets.json -->
+    <div class="gallery-wrap fade-up d1" id="galerie" aria-label="Galerie de projets" role="region">
+      <!-- Les slides, thumbnails et barre de progression sont injectés par le JS ci-dessous -->
+    </div>
+    <div class="atelier-quote">
+      <blockquote class="fade-up">
+        <span id="atelierQuoteText"></span>
+        <cite id="atelierQuoteCite"></cite>
+      </blockquote>
+      <div class="atelier-quote-right fade-up d2">
+        <div id="atelierRightText"></div>
+        <div class="atelier-stats" id="atelierStats"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="position:relative;overflow:hidden">
+  <span class="section-count" aria-hidden="true">05</span>
+  <div class="contact-inner">
+    <div class="contact-left">
+      <div class="section-label fade-up" id="contactLabel">Contact</div>
+      <h2 class="fade-up d1" id="contactTitle">Parlons de<br>votre <em>projet.</em></h2>
+      <p class="fade-up d2" id="contactIntro">Chaque projet commence par un dialogue. Décrivez-nous votre espace, votre vision, vos contraintes. Nous reviendrons vers vous avec attention.</p>
+      <div class="contact-info">
+        <div class="ci-item fade-up d3">
+          <span class="ci-label">Adresse</span>
+          <span class="ci-value" id="contactAddressValue">Chaussée de Haecht 588<br>1030 Schaerbeek, Bruxelles</span>
+        </div>
+        <div class="ci-item fade-up d4">
+          <span class="ci-label" id="contactPhoneLabel">Téléphone</span>
+          <span class="ci-value"><a href="tel:+32474093546" id="contactPhoneLink">+32 474 09 35 46</a></span>
+        </div>
+        <div class="ci-item fade-up d5">
+          <span class="ci-label" id="contactEmailLabel">Email</span>
+          <span class="ci-value"><a href="mailto:ferasouderfils@gmail.com" id="contactEmailLink">ferasouderfils@gmail.com</a></span>
+        </div>
+        <div class="ci-item fade-up d6">
+          <span class="ci-label">Horaires</span>
+          <span class="ci-value" id="contactHoursValue">Lundi – Vendredi : 8h – 16h<br>Samedi : 10h – 15h</span>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right fade-up d2">
+      <form id="contactForm" action="https://formspree.io/f/ferasouderfils" method="POST" novalidate>
+        <div class="form-field">
+          <input type="text" name="nom" id="nom" placeholder=" " required aria-required="true" autocomplete="name">
+          <label for="nom">Nom & Prénom</label>
+          <div class="form-line-bar"></div>
+        </div>
+        <div class="form-field">
+          <input type="email" name="email" id="email" placeholder=" " required aria-required="true" autocomplete="email">
+          <label for="email">Adresse e-mail</label>
+          <div class="form-line-bar"></div>
+        </div>
+        <div class="form-field">
+          <input type="tel" name="tel" id="tel" placeholder=" " autocomplete="tel">
+          <label for="tel">Téléphone (optionnel)</label>
+          <div class="form-line-bar"></div>
+        </div>
+        <div class="form-field">
+          <input type="text" name="projet" id="projet" placeholder=" " required aria-required="true">
+          <label for="projet">Nature du projet</label>
+          <div class="form-line-bar"></div>
+        </div>
+        <div class="form-field">
+          <textarea name="message" id="message" placeholder=" " required aria-required="true"></textarea>
+          <label for="message">Décrivez votre vision</label>
+          <div class="form-line-bar"></div>
+        </div>
+        <button type="submit" class="form-submit"><span class="sb" id="formSubmitLabel">Initier la conversation</span></button>
+      </form>
+      <div class="form-success" id="formSuccess" role="alert">
+        <div id="formSuccessHtml"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALISATION -->
+<section id="localisation">
+  <div class="loc-inner">
+    <div class="loc-bar fade-up">
+      <div class="loc-addr">
+        <strong id="locName">Fer à Souder Fils</strong><br>
+        <span id="locAddressLine">Chaussée de Haecht 588, 1030 Schaerbeek</span>
+      </div>
+      <div class="loc-hours" id="locHours"></div>
+    </div>
+    <iframe class="loc-map fade-up d1" id="locMap"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=4.3700,50.8620,4.3900,50.8720&layer=mapnik&marker=50.8670,4.3800"
+      title="Localisation Fer à Souder Fils" loading="lazy"></iframe>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-whiplash"></div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="f-logo">
+          <img src="https://i.ibb.co/cSKJz7GK/logo.png" alt="Fer à Souder Fils" class="f-logo-img" loading="lazy" id="brandLogoFooter">
+        </div>
+        <p id="footerDescription">Ferronnerie d'art contemporaine à Bruxelles. Chaque pièce naît d'un dialogue entre la ligne, la main et la matière.</p>
+        <div class="footer-tagline" id="footerTagline">« Fils de métal, courbes d'âme. »</div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#manifeste">Maison</a></li>
+          <li><a href="#creations">Créations</a></li>
+          <li><a href="#processus">Processus</a></li>
+          <li><a href="#atelier">Atelier</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Créations</h4>
+        <ul>
+          <li><a href="#creations">Auvents</a></li>
+          <li><a href="#creations">Escaliers & Rampes</a></li>
+          <li><a href="#creations">Baies vitrées</a></li>
+          <li><a href="#creations">Serres & Verrières</a></li>
+          <li><a href="#creations">Mobilier & Objets</a></li>
+          <li><a href="#creations">Lanterneaux</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nous trouver</h4>
+        <ul>
+          <li><a href="tel:+32474093546">+32 474 09 35 46</a></li>
+          <li><a href="mailto:ferasouderfils@gmail.com">ferasouderfils@gmail.com</a></li>
+          <li><a href="#localisation">Chaussée de Haecht 588<br>1030 Schaerbeek</a></li>
+        </ul>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram" id="socialInstagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" id="socialFacebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="mailto:ferasouderfils@gmail.com" aria-label="Email" id="socialEmail">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footerCopyright">© 2026 Fer à Souder Fils — Tous droits réservés</p>
+      <div style="display:flex;gap:24px;flex-wrap:wrap" id="footerLegalLinks">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+        <a href="#localisation" style="color:rgba(255,183,121,.38)">Chaussée de Haecht 588, Schaerbeek</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-bg" id="modalBg"></div>
+  <div class="modal-panel" id="modalPanel">
+    <div class="modal-hero">
+      <img id="modalImg" src="" alt="">
+      <div class="modal-hero-ph" id="modalPh"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-meta" id="modalMeta"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-desc" id="modalDesc"></p>
+    </div>
+    <button class="modal-close" id="modalClose" aria-label="Fermer">✕</button>
+  </div>
+</div>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

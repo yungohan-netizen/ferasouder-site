@@ -1,0 +1,227 @@
+backend:
+  # Cloudflare Pages: prefer a Git provider backend.
+  # For GitHub OAuth you typically use an external auth service
+  # (example: decap-cms-oauth) and point base_url/auth_endpoint to it.
+  name: github
+  repo: YOUR_GITHUB_USER/YOUR_REPO
+  branch: main
+  # base_url: https://YOUR-OAUTH-SERVICE.example.com
+  # auth_endpoint: auth
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+publish_mode: editorial_workflow
+
+# Allows local testing of the CMS without OAuth.
+local_backend: true
+
+collections:
+  - name: "content"
+    label: "Contenu"
+    files:
+      - label: "Site settings"
+        name: "site_settings"
+        file: "content/site-settings.json"
+        format: "json"
+        fields:
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Brand"
+            name: "brand"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo URL", name: "logoUrl", widget: "string" }
+          - label: "Nav"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "CTA label", name: "ctaLabel", widget: "string" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Address line", name: "addressLine", widget: "string" }
+              - { label: "Address HTML", name: "addressHtml", widget: "text" }
+              - { label: "Phone label", name: "phoneLabel", widget: "string" }
+              - { label: "Phone href", name: "phoneHref", widget: "string" }
+              - { label: "Phone text", name: "phoneText", widget: "string" }
+              - { label: "Email label", name: "emailLabel", widget: "string" }
+              - { label: "Email href", name: "emailHref", widget: "string" }
+              - { label: "Email text", name: "emailText", widget: "string" }
+              - { label: "Hours HTML", name: "hoursHtml", widget: "text" }
+          - label: "Localisation"
+            name: "localisation"
+            widget: "object"
+            fields:
+              - { label: "Map embed URL", name: "mapEmbedUrl", widget: "string" }
+              - label: "Hours"
+                name: "hours"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Socials"
+            name: "socials"
+            widget: "object"
+            fields:
+              - { label: "Instagram", name: "instagramHref", widget: "string" }
+              - { label: "Facebook", name: "facebookHref", widget: "string" }
+              - { label: "Email", name: "emailHref", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Copyright", name: "copyright", widget: "string" }
+              - label: "Legal links"
+                name: "legalLinks"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string" }
+
+      - label: "Home"
+        name: "home"
+        file: "content/home.json"
+        format: "json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Tagline HTML", name: "taglineHtml", widget: "text" }
+              - { label: "Side text", name: "sideText", widget: "string" }
+              - { label: "Video URL", name: "videoUrl", widget: "string" }
+              - label: "CTA primary"
+                name: "ctaPrimary"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string" }
+              - label: "CTA secondary"
+                name: "ctaSecondary"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string" }
+              - label: "Marquee"
+                name: "marquee"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+          - label: "Manifeste"
+            name: "manifeste"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title HTML", name: "titleHtml", widget: "text" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "p", widget: "text" }
+              - { label: "Note HTML", name: "noteHtml", widget: "string" }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                fields:
+                  - { label: "Src", name: "src", widget: "string" }
+                  - { label: "Alt", name: "alt", widget: "string" }
+                  - { label: "Placeholder label", name: "ph", widget: "string" }
+          - label: "Processus"
+            name: "processus"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title HTML", name: "titleHtml", widget: "text" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "CTA"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Atelier"
+            name: "atelier"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title HTML", name: "titleHtml", widget: "text" }
+              - label: "Quote"
+                name: "quote"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Cite", name: "cite", widget: "string" }
+              - label: "Right paragraphs"
+                name: "rightParagraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "p", widget: "text" }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "ARIA label", name: "ariaLabel", widget: "string" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title HTML", name: "titleHtml", widget: "text" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Form action", name: "formAction", widget: "string" }
+              - { label: "Form submit label", name: "formSubmitLabel", widget: "string" }
+              - { label: "Form success HTML", name: "formSuccessHtml", widget: "text" }
+
+      - label: "Projects"
+        name: "projects"
+        file: "content/projects.json"
+        format: "json"
+        fields:
+          - label: "Créations"
+            name: "creations"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title HTML", name: "titleHtml", widget: "text" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "ID", name: "id", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Category", name: "category", widget: "string" }
+                  - { label: "Subtitle", name: "subtitle", widget: "text" }
+                  - { label: "Location", name: "location", widget: "string" }
+                  - { label: "Card image", name: "cardImage", widget: "string" }
+                  - { label: "Modal image", name: "modalImage", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - label: "Meta"
+                    name: "meta"
+                    widget: "list"
+                    fields:
+                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "Value", name: "value", widget: "string" }
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Image", name: "image", widget: "string" }
+              - { label: "Thumb", name: "thumb", widget: "string" }

@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Fer à Souder Fils — Le fer qui raconte Bruxelles",
+    "description": "Fer à Souder Fils — Ferronnerie d'art contemporaine à Bruxelles. Auvents, escaliers, baies vitrées, verrières et mobilier sur mesure. Chaussée de Haecht 588, Schaerbeek."
+  },
+  "brand": {
+    "name": "Fer à Souder Fils",
+    "logoUrl": "https://i.ibb.co/cSKJz7GK/logo.png"
+  },
+  "nav": {
+    "ctaLabel": "Nous contacter"
+  },
+  "contact": {
+    "addressLine": "Chaussée de Haecht 588, 1030 Schaerbeek",
+    "addressHtml": "Chaussée de Haecht 588<br>1030 Schaerbeek, Bruxelles",
+    "phoneLabel": "Téléphone",
+    "phoneHref": "tel:+32474093546",
+    "phoneText": "+32 474 09 35 46",
+    "emailLabel": "Email",
+    "emailHref": "mailto:ferasouderfils@gmail.com",
+    "emailText": "ferasouderfils@gmail.com",
+    "hoursHtml": "Lundi – Vendredi : 8h – 16h<br>Samedi : 10h – 15h"
+  },
+  "localisation": {
+    "mapEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.3700,50.8620,4.3900,50.8720&layer=mapnik&marker=50.8670,4.3800",
+    "hours": [
+      { "label": "Lun – Ven", "value": "8h00 – 16h00" },
+      { "label": "Samedi", "value": "10h00 – 15h00" },
+      { "label": "Dimanche", "value": "Fermé" }
+    ]
+  },
+  "socials": {
+    "instagramHref": "#",
+    "facebookHref": "#",
+    "emailHref": "mailto:ferasouderfils@gmail.com"
+  },
+  "footer": {
+    "description": "Ferronnerie d'art contemporaine à Bruxelles. Chaque pièce naît d'un dialogue entre la ligne, la main et la matière.",
+    "tagline": "« Fils de métal, courbes d'âme. »",
+    "copyright": "© 2026 Fer à Souder Fils — Tous droits réservés",
+    "legalLinks": [
+      { "label": "Mentions légales", "href": "#" },
+      { "label": "Politique de confidentialité", "href": "#" },
+      { "label": "Chaussée de Haecht 588, Schaerbeek", "href": "#localisation" }
+    ]
+  }
+}

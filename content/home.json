@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "eyebrow": "Fer à Souder Fils — Bruxelles",
+    "taglineHtml": "Le fer qui<br>raconte Bruxelles.",
+    "sideText": "Schaerbeek · Bruxelles · Chaussée de Haecht",
+    "videoUrl": "https://res.cloudinary.com/dqfgzja87/video/upload/v1776293353/TensorPix_-_Animate_this_exact_202604160023_haxwde.mp4",
+    "ctaPrimary": { "label": "Nos créations", "href": "#creations" },
+    "ctaSecondary": { "label": "Nous contacter", "href": "#contact" },
+    "marquee": [
+      "Ferronnerie d'art",
+      "Auvents",
+      "Escaliers & Rampes",
+      "Baies vitrées",
+      "Serres & Verrières",
+      "Mobilier sur mesure",
+      "Lanterneaux"
+    ]
+  },
+  "manifeste": {
+    "label": "Maison",
+    "titleHtml": "La ferronnerie d'art<br><em>revisitée.</em>",
+    "paragraphs": [
+      "Nous ne travaillons pas le métal comme un simple matériau technique. Nous le façonnons comme une présence dans l'espace — une courbe qui prolonge l'architecture et lui donne une voix.",
+      "À Bruxelles, l'atelier donne forme à des pièces sur mesure pensées pour durer. Chaque soudure, chaque patine, chaque tension de ligne participe à un ensemble silencieux, précis, habité."
+    ],
+    "noteHtml": "Particuliers, architectes et entreprises — depuis 15 ans.",
+    "images": [
+      {
+        "src": "https://i.ibb.co/LdwyDsLc/xxxx.png",
+        "alt": "Atelier de ferronnerie d'art",
+        "ph": "Atelier"
+      },
+      {
+        "src": "https://i.ibb.co/S4x7DzQC/capture-d-cran-2026-01-15-161720-standard.webp",
+        "alt": "Détail de métal forgé",
+        "ph": "Détail"
+      },
+      {
+        "src": "https://i.ibb.co/8nzs9f4K/18.png",
+        "alt": "Processus de soudure",
+        "ph": "Forge"
+      }
+    ]
+  },
+  "processus": {
+    "label": "Méthode",
+    "titleHtml": "Du <em>trait</em><br>à la pièce.",
+    "intro": "Chaque projet commence par une écoute attentive. Nous construisons ensemble, étape par étape, une pièce qui appartient pleinement à son espace.",
+    "cta": { "label": "Démarrer un projet", "href": "#contact" },
+    "steps": [
+      {
+        "title": "La rencontre",
+        "text": "Comprendre votre espace, son architecture, sa lumière, ses contraintes. Le projet naît d'un dialogue — pas d'un catalogue."
+      },
+      {
+        "title": "Le dessin",
+        "text": "Chercher la juste tension entre fonction, architecture et présence sculpturale. Chaque ligne est pesée avant d'être forgée."
+      },
+      {
+        "title": "L'atelier",
+        "text": "Forger, souder, ajuster, patiner. Laisser la matière atteindre sa justesse. Le feu révèle ce que le dessin avait imaginé."
+      },
+      {
+        "title": "L'intégration",
+        "text": "Poser avec précision, pour que la pièce semble avoir toujours appartenu à l'espace. Silencieuse, exacte, définitive."
+      }
+    ]
+  },
+  "atelier": {
+    "label": "L'atelier",
+    "titleHtml": "L'héritage<br>du <em>geste.</em>",
+    "quote": {
+      "text": "« Chaque soudure est une signature. Chaque pièce, une conversation silencieuse entre le métal et la main. »",
+      "cite": "— Fer à Souder Fils, Schaerbeek"
+    },
+    "rightParagraphs": [
+      "Forts d'une expérience de 15 ans, nous mettons notre passion et notre savoir-faire au service de vos projets. Notre approche est personnalisée, notre engagement envers la qualité, absolu.",
+      "L'atelier est situé Chaussée de Haecht 588, au cœur de Schaerbeek — à deux pas de l'histoire Art nouveau de Bruxelles."
+    ],
+    "stats": [
+      { "value": "15", "label": "Ans d'expérience", "ariaLabel": "15 ans d'expérience" },
+      { "value": "100%", "label": "Sur mesure", "ariaLabel": "100% sur mesure" },
+      { "value": "BXL", "label": "Ancrage local", "ariaLabel": "Ancrage local" }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "titleHtml": "Parlons de<br>votre <em>projet.</em>",
+    "intro": "Chaque projet commence par un dialogue. Décrivez-nous votre espace, votre vision, vos contraintes. Nous reviendrons vers vous avec attention.",
+    "formAction": "https://formspree.io/f/ferasouderfils",
+    "formSubmitLabel": "Initier la conversation",
+    "formSuccessHtml": "<p>Votre message a bien été reçu.<br>Nous reviendrons vers vous avec attention.</p>"
+  }
+}
