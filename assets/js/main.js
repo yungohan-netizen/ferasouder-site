@@ -410,9 +410,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function closeGallery() {
-    // ── Restore page interaction FIRST, unconditionally ──
+    // ── Restore page interaction FIRST ──
     document.body.style.overflow = "";
-    if (window.__lenis) window.__lenis.start();
+    try {
+      if (window.Lenis) {
+        // If instantiated as a class globally
+        const l = document.querySelector('html').__lenis || window.__lenis;
+        if (l && typeof l.start === 'function') l.start();
+      } else if (window.__lenis) {
+        window.__lenis.start();
+      }
+    } catch (e) {
+      console.warn("Could not restart Lenis:", e);
+    }
 
     glbOpen = false;
     clearInterval(glbAutoTimer);
@@ -422,10 +432,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (glb) {
       glb.classList.remove("open");
       glb.setAttribute("aria-hidden", "true");
-      // Force pointer-events off inline immediately so the 0.5s opacity
-      // transition never blocks clicks underneath
-      glb.style.pointerEvents = "none";
-      setTimeout(() => { glb.style.pointerEvents = ""; }, 600);
+      // Interaction is now handled by CSS 'visibility' and 'pointer-events'
     }
 
     const bar = $("#glbProgressBar");
@@ -433,7 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bar.classList.remove("running");
       bar.style.transition = "none";
       bar.style.width = "0%";
-      setTimeout(() => { bar.style.transition = ""; }, 50);
+      setTimeout(() => { if (bar) bar.style.transition = ""; }, 50);
     }
 
     try { glbPrevFocus?.focus(); } catch (_) {}

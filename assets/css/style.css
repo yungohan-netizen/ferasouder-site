@@ -669,17 +669,20 @@ section { position: relative; z-index: 2; }
   text-transform: uppercase;
   color: var(--bronze);
   margin-bottom: 28px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  width: fit-content;
 }
 .section-label::before {
-  content: '';
-  display: block;
-  width: 28px;
-  height: 1px;
-  background: linear-gradient(to right, var(--bronze), rgba(255,183,121,.3));
-  flex-shrink: 0;
+  content: "" !important;
+  display: block !important;
+  width: 28px !important;
+  height: 1px !important;
+  background: var(--bronze) !important;
+  flex: 0 0 28px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* Fade-up — base */
@@ -760,6 +763,19 @@ section { position: relative; z-index: 2; }
    CRÉATIONS
    ======================================================================== */
 #creations { padding: clamp(80px, 11vw, 130px) var(--pad); background: var(--bg-s); }
+#creations .section-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+#creations .section-label::before {
+  content: "" !important;
+  display: block !important;
+  width: 28px !important;
+  height: 1px !important;
+  background: var(--bronze) !important;
+  flex: 0 0 28px !important;
+}
 .creations-inner { max-width: 1200px; margin: 0 auto; }
 
 .creations-header {
@@ -1726,13 +1742,15 @@ img.lazy-blur.loaded { filter: brightness(.65) saturate(.5); opacity: 1; }
   flex-direction: column;
   background: #080808;
   pointer-events: none;
+  visibility: hidden;
   opacity: 0;
-  transition: opacity 0.5s var(--ease-s);
+  transition: opacity 0.5s var(--ease-s), visibility 0.5s var(--ease-s);
   overflow: hidden;
   user-select: none;
 }
 #glb.open {
-  pointer-events: all;
+  pointer-events: auto;
+  visibility: visible;
   opacity: 1;
 }
 
@@ -2135,13 +2153,15 @@ img.lazy-blur.loaded { filter: brightness(.65) saturate(.5); opacity: 1; }
   flex-direction: column;
   background: #080808;
   pointer-events: none;
+  visibility: hidden;
   opacity: 0;
-  transition: opacity .5s var(--ease-s);
+  transition: opacity .5s var(--ease-s), visibility .5s var(--ease-s);
   overflow: hidden;
   user-select: none;
 }
 #glb.open {
-  pointer-events: all;
+  pointer-events: auto;
+  visibility: visible;
   opacity: 1;
 }
 #glb::before {

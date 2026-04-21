@@ -22,7 +22,7 @@
     "hoursHtml": "Lundi – Vendredi : 8h – 16h<br>Samedi : 10h – 15h"
   },
   "localisation": {
-    "mapEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.3700,50.8620,4.3900,50.8720&layer=mapnik&marker=50.8670,4.3800",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.8286469493!2d4.383173776997428!3d50.86745595754961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c360c78477ff%3A0xc3317c24479e0000!2sChauss%C3%A9e%20de%20Haecht%20588%2C%201030%20Schaerbeek!5e0!3m2!1sfr!2sbe!4v1713712900000!5m2!1sfr!2sbe",
     "hours": [
       { "label": "Lun – Ven", "value": "8h00 – 16h00" },
       { "label": "Samedi", "value": "10h00 – 15h00" },
