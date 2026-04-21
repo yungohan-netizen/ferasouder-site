@@ -3,7 +3,33 @@
     "label": "Nos créations",
     "titleHtml": "Pièces <em>uniques,</em><br>espaces singuliers.",
     "intro": "De la conception à la pose, chaque réalisation naît d'un dialogue entre votre vision et notre savoir-faire.",
+
     "items": [
+
+      {
+        "id": "ferronnerie-art",
+        "title": "Ferronnerie d'art",
+        "category": "Cœur de métier",
+        "subtitle": "Grilles, portails, claustra, ornements forgés à la main.",
+        "location": "Bruxelles",
+        "cardImage": "https://i.ibb.co/RGn8TtH4/21.png",
+        "ariaLabel": "Voir la galerie Ferronnerie d'art",
+        "description": "De la première ébauche des plans à la fabrication finale dans notre atelier — chaque pièce de ferronnerie est une signature. Grilles, portails, rampes et ornements sont forgés à la main à Schaerbeek, dans le respect des techniques transmises et réinventées.",
+        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }],
+        "images": [
+          {
+            "src": "https://i.ibb.co/RGn8TtH4/21.png",
+            "caption": "Ferronnerie d'art forgée à la main — atelier Schaerbeek",
+            "alt": "Ferronnerie d'art"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&q=85",
+            "caption": "Détail de forge, assemblage acier",
+            "alt": "Détail forge"
+          }
+        ]
+      },
+
       {
         "id": "auvents",
         "title": "Auvents sur mesure",
@@ -11,10 +37,23 @@
         "subtitle": "Structure métallique, intégration architecturale, protection et esthétique.",
         "location": "Bruxelles & périphérie",
         "cardImage": "https://i.ibb.co/3yDt9Zbb/1.png",
-        "modalImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=85",
+        "ariaLabel": "Voir la galerie Auvents sur mesure",
         "description": "De la première ébauche des plans à la construction finale dans notre atelier, suivie de l'installation sur site — chaque auvent est le fruit d'une combinaison parfaite entre fonctionnalité et esthétique. Nous concevons des structures qui s'intègrent harmonieusement à votre espace extérieur, en respectant l'architecture existante et en valorisant votre propriété.",
-        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }]
+        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }],
+        "images": [
+          {
+            "src": "https://i.ibb.co/3yDt9Zbb/1.png",
+            "caption": "Auvent sur mesure — structure métallique intégrée",
+            "alt": "Auvent sur mesure"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=85",
+            "caption": "Intégration architecturale, protection et esthétique",
+            "alt": "Auvent architectural"
+          }
+        ]
       },
+
       {
         "id": "escaliers",
         "title": "Escaliers & Rampes",
@@ -22,10 +61,23 @@
         "subtitle": "Garde-corps, limons, rampes forgées sur mesure.",
         "location": "Ixelles, Uccle, Schaerbeek",
         "cardImage": "https://i.ibb.co/RGn8TtH4/21.png",
-        "modalImage": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&q=85",
+        "ariaLabel": "Voir la galerie Escaliers & Rampes",
         "description": "L'escalier n'est pas seulement un élément fonctionnel — c'est une pièce maîtresse de votre décoration intérieure. Nous offrons des conseils avisés, la conception, la réalisation et l'installation d'escaliers sur mesure. Garde-corps, limons et rampes sont sélectionnés pour garantir sécurité et harmonie dans votre espace.",
-        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }]
+        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }],
+        "images": [
+          {
+            "src": "https://i.ibb.co/RGn8TtH4/21.png",
+            "caption": "Escalier sur mesure — Schaerbeek",
+            "alt": "Escalier sur mesure"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&q=85",
+            "caption": "Garde-corps et rampe forgée sur mesure",
+            "alt": "Garde-corps forgé"
+          }
+        ]
       },
+
       {
         "id": "baies",
         "title": "Baies vitrées & Portes",
@@ -33,10 +85,23 @@
         "subtitle": "Lumière, modernité, verrières d'intérieur.",
         "location": "Bruxelles",
         "cardImage": "https://i.ibb.co/jZy2ZVRT/dsc03567-high.webp",
-        "modalImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85",
+        "ariaLabel": "Voir la galerie Baies vitrées & Portes",
         "description": "La baie vitrée et la porte apportent lumière et modernité à votre espace de vie. Notre processus commence par une écoute attentive de vos souhaits, suivie de la conception, de la réalisation, du placement et de la mise en peinture. Chaque verrière que nous créons est une œuvre sur mesure.",
-        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }]
+        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }],
+        "images": [
+          {
+            "src": "https://i.ibb.co/jZy2ZVRT/dsc03567-high.webp",
+            "caption": "Baie vitrée sur mesure — verrière intérieure",
+            "alt": "Baie vitrée"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85",
+            "caption": "Lumière et modernité — porte acier fine section",
+            "alt": "Porte acier"
+          }
+        ]
       },
+
       {
         "id": "serres",
         "title": "Serres & Verrières",
@@ -44,10 +109,23 @@
         "subtitle": "Structures vitrées pour jardin, culture et lumière.",
         "location": "Belgique",
         "cardImage": "https://i.ibb.co/Q3F0KS12/img-1396-copie-high.webp",
-        "modalImage": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=85",
+        "ariaLabel": "Voir la galerie Serres & Verrières",
         "description": "La serre de jardin est un lieu de vie dédié à la croissance et au plaisir de cultiver. Elle prolonge les saisons et transforme votre jardin en un espace productif et harmonieux. Chaque projet est pensé pour s'adapter à votre environnement, vos usages et vos envies.",
-        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }]
+        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }],
+        "images": [
+          {
+            "src": "https://i.ibb.co/Q3F0KS12/img-1396-copie-high.webp",
+            "caption": "Serre sur mesure — structure acier et verre",
+            "alt": "Serre sur mesure"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=85",
+            "caption": "Verrière de jardin, lumière naturelle préservée",
+            "alt": "Verrière jardin"
+          }
+        ]
       },
+
       {
         "id": "mobilier",
         "title": "Mobilier & Objets",
@@ -55,10 +133,23 @@
         "subtitle": "Pièces décoratives, mobilier forgé, objets signature.",
         "location": "Sur mesure",
         "cardImage": "https://i.ibb.co/pvCDb6c3/010ebe66-b7b3-4fc4-b58f-4dc4c3a6cf6d-high.webp",
-        "modalImage": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=85",
+        "ariaLabel": "Voir la galerie Mobilier & Objets",
         "description": "Le mobilier et les éléments de décoration participent à l'ambiance et à l'identité de votre intérieur. Nous proposons une gamme complète de services, des conseils personnalisés à la fabrication et l'installation de mobilier sur mesure. Une attention particulière est accordée au choix des matériaux et des finitions.",
-        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }]
+        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }],
+        "images": [
+          {
+            "src": "https://i.ibb.co/pvCDb6c3/010ebe66-b7b3-4fc4-b58f-4dc4c3a6cf6d-high.webp",
+            "caption": "Mobilier forgé sur mesure — pièce unique d'atelier",
+            "alt": "Mobilier forgé"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=85",
+            "caption": "Objets signature, matériaux nobles et finitions soignées",
+            "alt": "Objets signature"
+          }
+        ]
       },
+
       {
         "id": "lanterneaux",
         "title": "Lanterneaux",
@@ -66,12 +157,26 @@
         "subtitle": "Lumière zénithale, éléments architecturaux sur mesure.",
         "location": "Bruxelles",
         "cardImage": "https://i.ibb.co/XrQ8p4jq/100-2920-800-high.webp",
-        "modalImage": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1200&q=85",
+        "ariaLabel": "Voir la galerie Lanterneaux",
         "description": "Le lanterneau apporte la lumière là où elle transforme l'espace et améliore le bien-être au quotidien. De l'étude de votre projet à la pose finale, nous vous accompagnons à chaque étape. Structure, vitrage, mécanismes d'ouverture et finitions sont soigneusement sélectionnés.",
-        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }]
+        "meta": [{ "label": "Réalisation", "value": "Sur mesure" }],
+        "images": [
+          {
+            "src": "https://i.ibb.co/XrQ8p4jq/100-2920-800-high.webp",
+            "caption": "Lanterneau sur mesure — lumière zénithale",
+            "alt": "Lanterneau"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1200&q=85",
+            "caption": "Vitrage et structure acier, finitions architecturales",
+            "alt": "Lanterneau architectural"
+          }
+        ]
       }
+
     ]
   },
+
   "gallery": [
     {
       "title": "Auvents sur mesure",
@@ -100,8 +205,8 @@
     {
       "title": "Mobilier & Objets",
       "category": "Décoration",
-      "image": "https://i.ibb.co/pvCDb6c3/010ebe66-b7b3-4fc4c3a6cf6d-high.webp",
-      "thumb": "https://i.ibb.co/pvCDb6c3/010ebe66-b7b3-4fc4c3a6cf6d-high.webp"
+      "image": "https://i.ibb.co/pvCDb6c3/010ebe66-b7b3-4fc4-b58f-4dc4c3a6cf6d-high.webp",
+      "thumb": "https://i.ibb.co/pvCDb6c3/010ebe66-b7b3-4fc4-b58f-4dc4c3a6cf6d-high.webp"
     },
     {
       "title": "Lanterneaux",
