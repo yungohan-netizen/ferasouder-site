@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   async function fetchJSON(url) {
-    const res = await fetch(url, { cache: "no-cache" });
+    const res = await fetch(url);
     if (!res.ok) throw new Error(`fetch failed: ${url}`);
     return await res.json();
   }
@@ -285,6 +285,14 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
       <div class="glb-progress-bar" id="glbProgressBar"></div>`;
     document.body.appendChild(el);
+
+    // Attach cursor hover listeners to glb buttons (injected after cursor setup runs)
+    if (window.matchMedia("(pointer:fine)").matches) {
+      el.querySelectorAll("button").forEach((btn) => {
+        btn.addEventListener("mouseenter", () => document.body.classList.add("c-hover"));
+        btn.addEventListener("mouseleave", () => document.body.classList.remove("c-hover"));
+      });
+    }
   }
 
   const pad2 = (n) => String(n).padStart(2, "0");
@@ -760,7 +768,6 @@ document.addEventListener("DOMContentLoaded", () => {
     (es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); } }),
     { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
   );
-  $$(".fade-up").forEach((el) => obs.observe(el));
 
   /* ─────────────────────────────────────────────
      ACTIVE NAV
@@ -944,9 +951,12 @@ document.addEventListener("DOMContentLoaded", () => {
     (es) => es.forEach((e) => {
       if (e.isIntersecting) {
         e.target.querySelectorAll(".stat-num").forEach((n) => {
-          const r = n.textContent.trim();
-          if (r === "15")   animCtr(n, 15,  "",  1800);
-          if (r === "100%") animCtr(n, 100, "%", 2000);
+          const raw = n.textContent.trim();
+          const num = parseInt(raw);
+          if (!isNaN(num)) {
+            const suf = raw.replace(String(num), "");
+            animCtr(n, num, suf, 2000);
+          }
         });
         co.unobserve(e.target);
       }
