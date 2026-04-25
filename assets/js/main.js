@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const CONTENT = {
-    settings: "content/site-settings.json",
-    home: "content/home.json",
-    projects: "content/projects.json",
-  };
+   settings: "/content/site-settings.json",
+   home: "/content/home.json",
+   projects: "/content/projects.json",
+ };
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
