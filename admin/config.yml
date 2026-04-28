@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: yungohan-netizen/ferasouder-site
-  branch: main
+  branch: master
   base_url: https://ferasouderfils.be
   auth_endpoint: /api/auth
 
