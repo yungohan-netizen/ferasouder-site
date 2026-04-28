@@ -2,119 +2,228 @@ backend:
   name: github
   repo: yungohan-netizen/ferasouder-site
   branch: master
-  base_url: https://ferasouderfils.be
-  auth_endpoint: /api/auth
-
-site_url: https://ferasouderfils.be
-display_url: https://ferasouderfils.be
+  base_url: https://sveltia-cms-auth.ton-account.workers.dev  # ← ton URL worker Sveltia
 
 media_folder: images/uploads
 public_folder: /images/uploads
 
 locale: fr
 
-# ─── COLLECTIONS ───────────────────────────────────────────────────────────────
-
 collections:
 
-  # ── Paramètres généraux du site ─────────────────────────────────────────────
+  # ── Paramètres du site ───────────────────────────────────────────────────────
   - name: settings
     label: "⚙️ Paramètres du site"
     files:
+
       - name: site_settings
         label: Paramètres généraux
         file: content/site-settings.json
         format: json
         fields:
-          - { label: "Nom du site",        name: site_name,    widget: string }
-          - { label: "Tagline",             name: tagline,      widget: string }
-          - { label: "Email de contact",    name: email,        widget: string }
-          - { label: "Téléphone",           name: phone,        widget: string, required: false }
-          - { label: "Adresse",             name: address,      widget: string, required: false }
-          - { label: "URL Instagram",       name: instagram,    widget: string, required: false }
-          - { label: "URL Facebook",        name: facebook,     widget: string, required: false }
 
-  # ── Contenu page d'accueil ──────────────────────────────────────────────────
+          - label: "Meta"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Titre de la page",    name: title,       widget: string }
+              - { label: "Meta description",    name: description, widget: text }
+
+          - label: "Marque"
+            name: brand
+            widget: object
+            fields:
+              - { label: "Nom",        name: name,    widget: string }
+              - { label: "URL du logo",name: logoUrl, widget: string }
+
+          - label: "Contact"
+            name: contact
+            widget: object
+            fields:
+              - { label: "Adresse (texte)",   name: addressLine, widget: string }
+              - { label: "Adresse (HTML)",    name: addressHtml, widget: string }
+              - { label: "Téléphone affiché", name: phoneText,   widget: string }
+              - { label: "Téléphone href",    name: phoneHref,   widget: string }
+              - { label: "Email affiché",     name: emailText,   widget: string }
+              - { label: "Email href",        name: emailHref,   widget: string }
+              - { label: "Horaires (HTML)",   name: hoursHtml,   widget: string }
+
+          - label: "Horaires détaillés"
+            name: localisation
+            widget: object
+            fields:
+              - label: "Lignes horaires"
+                name: hours
+                widget: list
+                fields:
+                  - { label: "Jour(s)",  name: label, widget: string }
+                  - { label: "Horaire", name: value, widget: string }
+
+          - label: "Réseaux sociaux"
+            name: socials
+            widget: object
+            fields:
+              - { label: "URL Instagram", name: instagramHref, widget: string }
+              - { label: "URL Facebook",  name: facebookHref,  widget: string }
+
+          - label: "Footer"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Description", name: description, widget: text }
+              - { label: "Tagline",     name: tagline,     widget: string }
+              - { label: "Copyright",   name: copyright,   widget: string }
+
+  # ── Page d'accueil ───────────────────────────────────────────────────────────
   - name: home
     label: "🏠 Page d'accueil"
     files:
+
       - name: home_content
         label: Contenu accueil
         file: content/home.json
         format: json
         fields:
+
           - label: "Hero"
             name: hero
             widget: object
             fields:
-              - { label: "Titre principal (ligne 1)", name: line1, widget: string }
-              - { label: "Titre principal (ligne 2)", name: line2, widget: string }
-              - { label: "Sous-titre / accroche",     name: tagline, widget: string }
-              - { label: "Texte bouton principal",    name: cta_primary, widget: string }
-              - { label: "Texte bouton secondaire",   name: cta_secondary, widget: string }
+              - { label: "Texte eyebrow",      name: eyebrow,    widget: string }
+              - { label: "Tagline (HTML)",      name: taglineHtml,widget: string }
+              - { label: "Texte latéral",       name: sideText,   widget: string }
+              - { label: "URL vidéo",           name: videoUrl,   widget: string }
+              - label: "CTA principal"
+                name: ctaPrimary
+                widget: object
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Href",  name: href,  widget: string }
+              - label: "CTA secondaire"
+                name: ctaSecondary
+                widget: object
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Href",  name: href,  widget: string }
+              - label: "Marquee (liste défilante)"
+                name: marquee
+                widget: list
+                field: { label: "Item", name: item, widget: string }
 
           - label: "Section Manifeste"
             name: manifeste
             widget: object
             fields:
-              - { label: "Titre",      name: title,   widget: string }
-              - { label: "Paragraphe", name: body,    widget: text }
-
-          - label: "Section À propos / Processus"
-            name: processus
-            widget: object
-            fields:
-              - { label: "Titre",      name: title,   widget: string }
-              - { label: "Paragraphe", name: body,    widget: text }
-
-          - label: "Statistiques"
-            name: stats
-            widget: list
-            fields:
-              - { label: "Valeur (ex: 15 ou 100%)", name: value,  widget: string }
-              - { label: "Label",                    name: label,  widget: string }
-
-          - label: "Citation atelier"
-            name: quote
-            widget: object
-            fields:
-              - { label: "Texte de la citation", name: text,   widget: text }
-              - { label: "Auteur",               name: author, widget: string }
-
-  # ── Projets / Galeries ──────────────────────────────────────────────────────
-  - name: projects
-    label: "🖼️ Réalisations"
-    files:
-      - name: projects_list
-        label: Liste des réalisations
-        file: content/projects.json
-        format: json
-        fields:
-          - label: Réalisations
-            name: projects
-            widget: list
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Titre",       name: title,    widget: string }
-              - { label: "Catégorie",   name: cat,      widget: string,
-                  hint: "Ex: Ferronnerie, Mobilier, Sculpture…" }
-              - { label: "Sous-titre",  name: subtitle, widget: string, required: false }
-              - { label: "Description", name: desc,     widget: text,   required: false }
-              - { label: "Lieu",        name: location, widget: string, required: false }
-
-              - label: "Image principale (miniature)"
-                name: cover
-                widget: image
-
-              - label: "Photos de la galerie"
+              - { label: "Label section",  name: label,     widget: string }
+              - { label: "Titre (HTML)",   name: titleHtml, widget: string }
+              - label: "Paragraphes"
+                name: paragraphs
+                widget: list
+                field: { label: "Paragraphe", name: item, widget: text }
+              - { label: "Note (HTML)", name: noteHtml, widget: string }
+              - label: "Images"
                 name: images
                 widget: list
                 fields:
-                  - { label: "Photo",   name: src,     widget: image }
-                  - { label: "Légende", name: caption, widget: string, required: false }
-                  - { label: "Alt",     name: alt,     widget: string, required: false }
+                  - { label: "URL",    name: src, widget: string }
+                  - { label: "Alt",    name: alt, widget: string }
+                  - { label: "Placeholder", name: ph, widget: string }
 
-              - label: "Visible sur le site"
-                name: published
-                widget: boolean
-                default: true
+          - label: "Section Processus"
+            name: processus
+            widget: object
+            fields:
+              - { label: "Label section", name: label,     widget: string }
+              - { label: "Titre (HTML)",  name: titleHtml, widget: string }
+              - { label: "Intro",         name: intro,     widget: text }
+              - label: "Étapes"
+                name: steps
+                widget: list
+                fields:
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text,  widget: text }
+
+          - label: "Section Atelier"
+            name: atelier
+            widget: object
+            fields:
+              - { label: "Label section", name: label,     widget: string }
+              - { label: "Titre (HTML)",  name: titleHtml, widget: string }
+              - label: "Citation"
+                name: quote
+                widget: object
+                fields:
+                  - { label: "Texte",  name: text, widget: text }
+                  - { label: "Auteur", name: cite, widget: string }
+              - label: "Paragraphes droite"
+                name: rightParagraphs
+                widget: list
+                field: { label: "Paragraphe", name: item, widget: text }
+              - label: "Statistiques"
+                name: stats
+                widget: list
+                fields:
+                  - { label: "Valeur",     name: value,     widget: string }
+                  - { label: "Label",      name: label,     widget: string }
+                  - { label: "Aria label", name: ariaLabel, widget: string }
+
+          - label: "Section Contact"
+            name: contact
+            widget: object
+            fields:
+              - { label: "Label section",      name: label,           widget: string }
+              - { label: "Titre (HTML)",        name: titleHtml,       widget: string }
+              - { label: "Intro",               name: intro,           widget: text }
+              - { label: "Formspree URL",       name: formAction,      widget: string }
+              - { label: "Label bouton envoi",  name: formSubmitLabel, widget: string }
+
+  # ── Réalisations ─────────────────────────────────────────────────────────────
+  - name: projects
+    label: "🖼️ Réalisations"
+    files:
+
+      - name: projects_content
+        label: Réalisations & Galerie
+        file: content/projects.json
+        format: json
+        fields:
+
+          - label: "En-tête section Créations"
+            name: creations
+            widget: object
+            fields:
+              - { label: "Label section",  name: label,     widget: string }
+              - { label: "Titre (HTML)",   name: titleHtml, widget: string }
+              - { label: "Intro",          name: intro,     widget: text }
+
+              - label: "Projets"
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "ID (slug unique)",  name: id,          widget: string }
+                  - { label: "Titre",             name: title,       widget: string }
+                  - { label: "Catégorie",         name: category,    widget: string }
+                  - { label: "Sous-titre",        name: subtitle,    widget: string }
+                  - { label: "Lieu",              name: location,    widget: string }
+                  - { label: "Description",       name: description, widget: text }
+                  - { label: "Image carte (URL)", name: cardImage,   widget: string,
+                      hint: "URL ibb.co ou autre hébergeur image" }
+                  - { label: "Aria label bouton", name: ariaLabel,   widget: string }
+                  - label: "Photos galerie"
+                    name: images
+                    widget: list
+                    fields:
+                      - { label: "URL photo",  name: src,     widget: string }
+                      - { label: "Légende",    name: caption, widget: string }
+                      - { label: "Alt",        name: alt,     widget: string }
+
+          - label: "Galerie atelier (photos défilantes)"
+            name: gallery
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Titre",         name: title,    widget: string }
+              - { label: "Catégorie",     name: category, widget: string }
+              - { label: "URL image",     name: image,    widget: string }
+              - { label: "URL miniature", name: thumb,    widget: string }
