@@ -2,7 +2,7 @@ backend:
   name: github
   repo: yungohan-netizen/ferasouder-site
   branch: master
-  base_url: https://sveltia-cms-auth.ton-account.workers.dev  # ← ton URL worker Sveltia
+  base_url: https://ferasouder-site.pages.dev/api/auth
 
 media_folder: images/uploads
 public_folder: /images/uploads
