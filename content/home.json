@@ -1,11 +1,17 @@
 {
   "hero": {
     "eyebrow": "Fer à Souder Fils — Bruxelles",
-    "taglineHtml": "Le fer qui<br>raconte Bruxelles.",
+    "taglineHtml": "L’art du fer à Bruxelles",
     "sideText": "Schaerbeek · Bruxelles · Chaussée de Haecht",
     "videoUrl": "https://res.cloudinary.com/dqfgzja87/video/upload/v1776293353/TensorPix_-_Animate_this_exact_202604160023_haxwde.mp4",
-    "ctaPrimary": { "label": "Nos créations", "href": "#creations" },
-    "ctaSecondary": { "label": "Nous contacter", "href": "#contact" },
+    "ctaPrimary": {
+      "label": "Nos créations",
+      "href": "#creations"
+    },
+    "ctaSecondary": {
+      "label": "Nous contacter",
+      "href": "#contact"
+    },
     "marquee": [
       "Ferronnerie d'art",
       "Auvents",
@@ -46,7 +52,6 @@
     "label": "Méthode",
     "titleHtml": "Du <em>trait</em><br>à la pièce.",
     "intro": "Chaque projet commence par une écoute attentive. Nous construisons ensemble, étape par étape, une pièce qui appartient pleinement à son espace.",
-    "cta": { "label": "Démarrer un projet", "href": "#contact" },
     "steps": [
       {
         "title": "La rencontre",
@@ -64,7 +69,11 @@
         "title": "L'intégration",
         "text": "Poser avec précision, pour que la pièce semble avoir toujours appartenu à l'espace. Silencieuse, exacte, définitive."
       }
-    ]
+    ],
+    "cta": {
+      "href": "#contact",
+      "label": "Démarrer un projet"
+    }
   },
   "atelier": {
     "label": "L'atelier",
@@ -78,9 +87,21 @@
       "L'atelier est situé Chaussée de Haecht 588, au cœur de Schaerbeek — à deux pas de l'histoire Art nouveau de Bruxelles."
     ],
     "stats": [
-      { "value": "15", "label": "Ans d'expérience", "ariaLabel": "15 ans d'expérience" },
-      { "value": "100%", "label": "Sur mesure", "ariaLabel": "100% sur mesure" },
-      { "value": "BXL", "label": "Ancrage local", "ariaLabel": "Ancrage local" }
+      {
+        "value": "15",
+        "label": "Ans d'expérience",
+        "ariaLabel": "15 ans d'expérience"
+      },
+      {
+        "value": "100%",
+        "label": "Sur mesure",
+        "ariaLabel": "100% sur mesure"
+      },
+      {
+        "value": "BXL",
+        "label": "Ancrage local",
+        "ariaLabel": "Ancrage local"
+      }
     ]
   },
   "contact": {
