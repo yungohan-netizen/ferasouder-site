@@ -23,12 +23,32 @@
             "src": "https://i.ibb.co/YFkcnGJV/19.png",
             "caption": "Détail de forge, assemblage acier",
             "alt": "Détail forge"
+          },
+          {
+            "src": "https://ibb.co/6R5HnS9w",
+            "caption": "Auvents de l'Hotel La Grande Cloche",
+            "alt": "Hotel La Grande Cloche"
+          },
+          {
+            "src": "https://ibb.co/C5r2HkS7",
+            "caption": "DE BRAUATELIER",
+            "alt": "Détail de forge, assemblage acier"
+          },
+          {
+            "src": "https://ibb.co/hJZRHGcD",
+            "caption": "Détail de forge, assemblage acier",
+            "alt": "Détail de forge, assemblage acier"
+          },
+          {
+            "src": "https://ibb.co/mVx1rQMX",
+            "caption": "Détail de forge, assemblage acier",
+            "alt": "Détail de forge, assemblage acier"
           }
         ],
         "meta": [
           {
-            "value": "Sur mesure",
-            "label": "Réalisation"
+            "label": "Réalisation",
+            "value": "Sur mesure"
           }
         ]
       },
@@ -55,8 +75,8 @@
         ],
         "meta": [
           {
-            "value": "Sur mesure",
-            "label": "Réalisation"
+            "label": "Réalisation",
+            "value": "Sur mesure"
           }
         ]
       },
@@ -83,8 +103,8 @@
         ],
         "meta": [
           {
-            "value": "Sur mesure",
-            "label": "Réalisation"
+            "label": "Réalisation",
+            "value": "Sur mesure"
           }
         ]
       },
@@ -111,8 +131,8 @@
         ],
         "meta": [
           {
-            "value": "Sur mesure",
-            "label": "Réalisation"
+            "label": "Réalisation",
+            "value": "Sur mesure"
           }
         ]
       },
@@ -139,8 +159,8 @@
         ],
         "meta": [
           {
-            "value": "Sur mesure",
-            "label": "Réalisation"
+            "label": "Réalisation",
+            "value": "Sur mesure"
           }
         ]
       },
@@ -167,8 +187,8 @@
         ],
         "meta": [
           {
-            "value": "Sur mesure",
-            "label": "Réalisation"
+            "label": "Réalisation",
+            "value": "Sur mesure"
           }
         ]
       },
@@ -195,8 +215,8 @@
         ],
         "meta": [
           {
-            "value": "Sur mesure",
-            "label": "Réalisation"
+            "label": "Réalisation",
+            "value": "Sur mesure"
           }
         ]
       }
